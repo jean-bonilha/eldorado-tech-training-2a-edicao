@@ -14,13 +14,13 @@
                     <h3 class="login-title">Fazer login</h3>
                     <form>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Email *" value="" required />
+                            <input type="text" class="form-control" placeholder="Email *" value="" />
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Senha *" value="" required />
+                            <input type="password" class="form-control" placeholder="Senha *" value="" />
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btn-submit" value="Login" />
+                            <input type="submit" id="login" class="btn-submit" value="Login" />
                         </div>
                         <div class="form-group">
                             <a href="#" class="btn-forget-pwd">Esqueceu sua senha?</a>
@@ -34,10 +34,10 @@
                     <h3 class="login-title">Registrar-se</h3>
                     <form>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Email *" value="" required />
+                            <input type="text" class="form-control" placeholder="Email *" value="" />
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Senha *" value="" required />
+                            <input type="password" class="form-control" placeholder="Senha *" value="" />
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btn-submit" value="Registrar" />
@@ -46,5 +46,16 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            /*
+            * Usando JavaScript Vanilla para evitar carregar bibliotecas
+            */
+            document.addEventListener("click", function(event) {
+                if (event.target.matches('#login')) {
+                    location.href = 'dashboard.html'
+                }
+            })
+        </script>
     </body>
 </html>
